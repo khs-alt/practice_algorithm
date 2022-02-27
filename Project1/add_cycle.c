@@ -9,13 +9,18 @@ int main() {
 	int time=0;
 	scanf("%d", &N);
 
+	a = N / 10;
+	b = N % 10;
+
 	while (N != result) {
 
-		a = N / 10;
-		b = N % 10;
-
 		tmp = a + b;
-		result = 10 * a + (tmp % 10);
+		result = 10 * b + (tmp % 10);
+	
+
+		a = result / 10;
+		b = result % 10;
+
 		time++;
 	}
 
